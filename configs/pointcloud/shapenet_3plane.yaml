@@ -2,7 +2,8 @@ method: conv_onet
 data:
   input_type: pointcloud
   classes: null
-  path: data/ShapeNet
+  path: /mnt/raphael/ShapeNet
+#  path: /home/raphael/data
   pointcloud_n: 3000
   pointcloud_noise: 0.005
   points_subsample: 2048
@@ -27,6 +28,7 @@ model:
   c_dim: 32
 training:
   out_dir: out/pointcloud/shapenet_3plane
+#  out_dir: out/mine
   batch_size: 32
   model_selection_metric: iou
   model_selection_mode: maximize

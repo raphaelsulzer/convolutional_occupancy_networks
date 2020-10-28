@@ -1,0 +1,21 @@
+inherit_from: configs/pointcloud/shapenet_3plane.yaml
+method: conv_onet
+data:
+  input_type: pointcloud
+  classes: null
+  path: /home/raphael/data/occ
+  pointcloud_n: 100
+  pointcloud_file: points.npz
+  points_file: points.npz
+  split: null
+  voxels_file: null
+  points_iou_file: null
+  train_split: null
+  val_split: null
+  test_split: custom
+training:
+  out_dir: out/mine
+test:
+  model_file: https://s3.eu-central-1.amazonaws.com/avg-projects/convolutional_occupancy_networks/models/pointcloud/shapenet_3plane.pt
+generation:
+  generation_dir: generation

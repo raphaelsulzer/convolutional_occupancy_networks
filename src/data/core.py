@@ -89,7 +89,10 @@ class Shapes3dDataset(data.Dataset):
                 self.models += [
                     {'category': c, 'model': m} for m in [d for d in os.listdir(subpath) if (os.path.isdir(os.path.join(subpath, d)) and d != '') ]
                 ]
-
+            elif split == 'custom':
+                self.models += [
+                    {'category': c, 'model': m} for m in [d for d in os.listdir(subpath)]
+                ]
             else:
                 split_file = os.path.join(subpath, split + '.lst')
                 with open(split_file, 'r') as f:

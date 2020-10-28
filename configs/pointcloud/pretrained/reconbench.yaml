@@ -1,4 +1,4 @@
-inherit_from: configs/pointcloud/shapenet_3plane.yaml
+inherit_from: configs/pointcloud/reconbench.yaml
 generation:
   generation_dir: generation_pretrained
 test:
