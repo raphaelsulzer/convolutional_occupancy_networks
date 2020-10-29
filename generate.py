@@ -36,6 +36,7 @@ if vis_n_outputs is None:
 
 # Dataset
 dataset = config.get_dataset('test', cfg, return_idx=True)
+mydataset = config.get_dataset('test', cfg, return_idx=False)
 
 # Model
 model = config.get_model(cfg, device=device, dataset=dataset)

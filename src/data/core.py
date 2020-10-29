@@ -143,6 +143,10 @@ class Shapes3dDataset(data.Dataset):
         model = self.models[idx]['model']
         c_idx = self.metadata[category]['idx']
 
+        # {'category': '03211117', 'model': 'd7ab9503d7f6dac6b4382097c3e8bcf7'}
+        # reconbench self.fields
+        # {'points': <src.data.fields.PointsField object at 0x7f55396ce198>, 'points_iou': <src.data.fields.PointsField object at 0x7f55396d3da0>, 'inputs': <src.data.fields.PointCloudField object at 0x7f55396d3400>, 'idx': <src.data.fields.IndexField object at 0x7f55396d33c8>}
+
         model_path = os.path.join(self.dataset_folder, category, model)
         data = {}
 
