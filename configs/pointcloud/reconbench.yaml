@@ -5,13 +5,13 @@ data:
   classes: null
   path: /home/raphael/data/occ
   pointcloud_n: 100
-  points_file: points.npz
+  points_file: oints.npz
   split: null
   voxels_file: null
   points_iou_file: points.npz
   train_split: null
   val_split: null
-  test_split: custom
+  test_split: null
 training:
   out_dir: out/mine
 test:

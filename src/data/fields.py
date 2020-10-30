@@ -102,6 +102,8 @@ class PointsField(Field):
     It provides the field to load point data. This is used for the points
     randomly sampled in the bounding volume of the 3D shape.
 
+    # TODO: for me: I need to generate such files for the reconbench shapes!!
+
     Args:
         file_name (str): file name
         transform (list): list of transformations which will be applied to the points tensor
@@ -272,6 +274,9 @@ class PointCloudField(Field):
     It provides the field used for point cloud data. These are the points
     randomly sampled on the mesh.
 
+    # TODO: for me: for the PointCloudField I can use my own sampling, simply load the ply files and save it as npz
+
+
     Args:
         file_name (str): file name
         transform (list): list of transformations applied to data points
@@ -297,6 +302,8 @@ class PointCloudField(Field):
             file_path = os.path.join(model_path, self.file_name, '%s_%02d.npz' % (self.file_name, num))
 
         pointcloud_dict = np.load(file_path)
+
+        point_dict = np.load(file_path)
 
         points = pointcloud_dict['points'].astype(np.float32)
         normals = pointcloud_dict['normals'].astype(np.float32)
